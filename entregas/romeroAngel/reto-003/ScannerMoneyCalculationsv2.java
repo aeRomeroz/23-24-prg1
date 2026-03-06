@@ -11,7 +11,7 @@ class ScannerMoneyCalculationsv2 {
         int change = paid - sellPrice;	
         int billDenomination;
         int billQuantity;
-        String mensaje;
+        String changeMessage;
             
         String bil100 = "billete de " + 100 + " euros"; 
         String bil50 = "billete de " + 50 + " euros"; 
@@ -37,43 +37,43 @@ class ScannerMoneyCalculationsv2 {
         billDenomination = 100;
         billQuantity = change/billDenomination;
         change = change%billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + bil100 + "\n" : ""); 
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil100 + "\n" : ""); 
+        System.out.print(changeMessage);
         
         billDenomination = 50;
         billQuantity = change/billDenomination;
         change = change%billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + bil50 + "\n" : ""); 
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil50 + "\n" : ""); 
+        System.out.print(changeMessage);
         
         billDenomination = 20;
         billQuantity = change/billDenomination;
         change = change%billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + bil20 + "\n" : ""); 
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil20 + "\n" : ""); 
+        System.out.print(changeMessage);
         
         billDenomination = 10;
         billQuantity = change/billDenomination;
         change = change%billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + bil10 + "\n" : "");  
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil10 + "\n" : "");  
+        System.out.print(changeMessage);
        
         billDenomination = 5;
         billQuantity = change/billDenomination;
         change = change%billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + bil5 + "\n" : "");  
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil5 + "\n" : "");  
+        System.out.print(changeMessage);
 
         billDenomination = 2;
         billQuantity = change/billDenomination;
         change = change%billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + mon2 + "\n"  : "");  
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + mon2 + "\n"  : "");  
+        System.out.print(changeMessage);
        
         billDenomination = 1;
         billQuantity = change/billDenomination;
-        mensaje = ((billQuantity > 0) ? billQuantity + " " + mon1 + "\n"  : ""); 
-        System.out.print(mensaje);
+        changeMessage = ((billQuantity > 0) ? billQuantity + " " + mon1 + "\n"  : ""); 
+        System.out.print(changeMessage);
  
         System.out.println();
         System.out.println("-------------");
