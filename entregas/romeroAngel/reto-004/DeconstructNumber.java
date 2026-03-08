@@ -5,28 +5,28 @@ public class DeconstructNumber {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ingrese un número de 3 digitos:");
-        int num1 = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
         System.out.println("Ingrese un segundo número de 3 digitos:");
-        int num2 = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
         System.out.println("Ingrese un tercer número de 3 digitos:");
-        int num3 = scanner.nextInt();
+        int thirdNumber = scanner.nextInt();
         
-        int dig1;
-        int dig2;
-        int dig3;
-        int deconNum;
+        int hundreds;
+        int tens;
+        int ones;
+        int deconstructedNumber;
 
-        System.out.println("Número 1: " + num1);
-        System.out.println("Número 2: " + num2);
-        System.out.println("Número 3: " + num3);
+        System.out.println("Número 1: " + firstNumber);
+        System.out.println("Número 2: " + secondNumber);
+        System.out.println("Número 3: " + thirdNumber);
 
-        dig1 = num1/100;
-        dig2 = (num2/10)%10;
-        dig3 = num3%10;
+        hundreds = firstNumber/100;
+        tens = (secondNumber/10)%10;
+        ones = thirdNumber%10;
 
-        deconNum = dig1*100 + dig2*10 + dig3;
+        deconstructedNumber = hundreds*100 + tens*10 + ones;
 
-        System.out.print(deconNum);
+        System.out.print(deconstructedNumber);
 
     }
 }
