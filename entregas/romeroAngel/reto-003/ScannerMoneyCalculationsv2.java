@@ -8,18 +8,7 @@ class ScannerMoneyCalculationsv2 {
         int sellPrice = scanner.nextInt();
         System.out.println("Monto a dar:");
         int paid = scanner.nextInt();
-        int change = paid - sellPrice;	
-        int billDenomination;
-        int billQuantity;
-        String changeMessage;
-            
-        String bil100 = "billete de " + 100 + " euros"; 
-        String bil50 = "billete de " + 50 + " euros"; 
-        String bil20 = "billete de " + 20 + " euros"; 
-        String bil10 = "billete de " + 10 + " euros"; 
-        String bil5 = "billete de " + 5 + " euros"; 
-        String mon2 = "moneda de " + 2 + " euros";
-        String mon1 = "moneda de " + 1 + " euro";
+        int change = paid - sellPrice;
             
         System.out.println("||===================||");
         System.out.println("||  RECIBO DE COMPRA ||");			
