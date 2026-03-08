@@ -34,52 +34,24 @@ class ScannerMoneyCalculationsv2 {
         System.out.println("dado con un total de: ");
         System.out.println();
 
-        billDenomination = 100;
-        billQuantity = change/billDenomination;
-        change = change%billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil100 + "\n" : ""); 
-        System.out.print(changeMessage);
-        
-        billDenomination = 50;
-        billQuantity = change/billDenomination;
-        change = change%billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil50 + "\n" : ""); 
-        System.out.print(changeMessage);
-        
-        billDenomination = 20;
-        billQuantity = change/billDenomination;
-        change = change%billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil20 + "\n" : ""); 
-        System.out.print(changeMessage);
-        
-        billDenomination = 10;
-        billQuantity = change/billDenomination;
-        change = change%billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil10 + "\n" : "");  
-        System.out.print(changeMessage);
-       
-        billDenomination = 5;
-        billQuantity = change/billDenomination;
-        change = change%billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + bil5 + "\n" : "");  
-        System.out.print(changeMessage);
-
-        billDenomination = 2;
-        billQuantity = change/billDenomination;
-        change = change%billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + mon2 + "\n"  : "");  
-        System.out.print(changeMessage);
-       
-        billDenomination = 1;
-        billQuantity = change/billDenomination;
-        changeMessage = ((billQuantity > 0) ? billQuantity + " " + mon1 + "\n"  : ""); 
-        System.out.print(changeMessage);
+        change = printDenominationChange(change, 100, "billete de 100 euros");
+        change = printDenominationChange(change, 50,  "billete de 50 euros");
+        change = printDenominationChange(change, 20,  "billete de 20 euros");
+        change = printDenominationChange(change, 10,  "billete de 10 euros");
+        change = printDenominationChange(change, 5,   "billete de 5 euros");
+        change = printDenominationChange(change, 2,   "moneda de 2 euros");
+        change = printDenominationChange(change, 1,   "moneda de 1 euro");
  
         System.out.println();
         System.out.println("-------------");
         System.out.println("Gracias por su compra!  ");
-        
-        
-        
     }	
+
+    static int printDenominationChange(int change, int denominationValue, String denominationLabel) {
+        int billQuantity = change / denominationValue;
+        if (billQuantity > 0) {
+            System.out.println(billQuantity + " " + denominationLabel);
+        }
+        return change % denominationValue;
+    }
 }
